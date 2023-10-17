@@ -16,7 +16,7 @@
     background-color: greenyellow;
 }
 
-.debug .col-7{
+.debug .card{
     background-color: green;
     height: 100px;
     border: 2px solid white;
@@ -51,7 +51,6 @@
 body{
     background-color: black;
     font-family: Arial, Helvetica, sans-serif;
-    overflow: hidden;
 }
 
 
@@ -60,7 +59,7 @@ body{
 
 header{
     width: 100%;
-    height: 5vh;
+    height: 40px;
     justify-content: flex-end;
     
 }
@@ -77,29 +76,35 @@ header{
 /* Main */
 
 main{
-    height: 87vh;
+    height: calc(100vh - 40px - 80px);
+    width: 100%;
+    overflow-y: auto;
 }
 
 .container{
-    height: 100%;
-    width: 80%;
-    margin: auto;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .row{
-   width: 100%;
-   flex-wrap: wrap;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.col-7{
-   display: flex;
-   position: relative;
-   width: calc(100% / 7);
+.card{
+    width: 150px;
+    min-width: 100px;
+    aspect-ratio: 4 / 3;
+    margin: 10px;
+    position: relative;
+    margin: 0.5rem 1rem;
 }
 
-img{
+.card.img{
     width: 100%;
-    padding: 5px 2px;
+    height: 100%;
 }
 
 .name{
@@ -109,14 +114,16 @@ img{
     background-color: rgba(128, 128, 128, 0.284);
     color: white;
     font-size: 12px;
+    padding: 3px;
 }
 
 
 /* Footer */
 
 footer{
+    min-width: 750px;
     width: 100%;
-    height: 8vh;
+    height: 80px;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(34, 34, 34);
